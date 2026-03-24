@@ -26,8 +26,8 @@
                 <a href="#contact" class="nav-link" data-i18n="nav.contact">Contact</a>
             </nav>
             <div class="language-switcher">
-                <button class="lang-btn" data-lang="en">EN</button>
                 <button class="lang-btn" data-lang="lv">LV</button>
+                <button class="lang-btn" data-lang="en">EN</button>
                 <button class="lang-btn" data-lang="ru">RU</button>
             </div>
         </div>
@@ -255,7 +255,7 @@
             btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
         });
 
-        applyLanguage(localStorage.getItem(LANG_STORAGE_KEY) || 'en');
+        applyLanguage(localStorage.getItem(LANG_STORAGE_KEY) || 'lv');
 
         // --- Scroll animations ---
         const animateObserver = new IntersectionObserver((entries) => {
