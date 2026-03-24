@@ -91,6 +91,26 @@ body {
     }
 }
 
+.header-nav {
+    display: flex;
+    gap: 2rem;
+    align-items: center;
+}
+
+.nav-link {
+    font-family: var(--font-body);
+    font-size: 0.95rem;
+    font-weight: 500;
+    color: var(--color-accent-dark);
+    text-decoration: none;
+    transition: var(--transition);
+    display: inline-block;
+}
+
+.nav-link:hover {
+    transform: scale(1.1);
+}
+
 .language-switcher {
     display: flex;
     gap: 0.5rem;
@@ -715,6 +735,10 @@ body {
         padding: var(--spacing-sm);
     }
 
+    .header-nav {
+        display: none;
+    }
+
     .logo-svg {
         height: 40px;
     }
@@ -882,4 +906,8 @@ body {
 /* Smooth scrolling offset for fixed header */
 section[id] {
     scroll-margin-top: 100px;
+}
+
+html {
+    scroll-behavior: smooth;
 }
