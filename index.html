@@ -18,9 +18,9 @@
                 <img src="logo.svg" alt="RKD Logo" class="logo-svg">
             </div>
             <div class="language-switcher">
-                <button class="lang-btn active">EN</button>
-                <button class="lang-btn" disabled>LV</button>
-                <button class="lang-btn" disabled>RU</button>
+                <button class="lang-btn" data-lang="en">EN</button>
+                <button class="lang-btn" data-lang="lv">LV</button>
+                <button class="lang-btn" data-lang="ru">RU</button>
             </div>
         </div>
     </header>
@@ -31,7 +31,7 @@
             <h1 class="hero-title">
                 <span class="hero-abbr">RKD</span>
                 <span class="hero-separator"></span>
-                <span class="hero-name">Riga Church of Christ</span>
+                <span class="hero-name" data-i18n="hero.name">Riga Church of Christ</span>
             </h1>
         </div>
     </section>
@@ -41,23 +41,23 @@
         <div class="container">
             <div class="about-grid">
                 <article class="about-card">
-                    <h3 class="card-title">Mission</h3>
-                    <p>Riga Church of Christ (RKD, Rīgas Kristus Draudze) was founded in Riga in 1995 and is part of the International Churches of Christ movement (ICOC). Our mission is to live by and pass on the Christianity described in the New Testament. It is a living, practical faith that transforms people, families, and society.</p>
+                    <h3 class="card-title" data-i18n="about.mission.title">Mission</h3>
+                    <p data-i18n="about.mission.body">Riga Church of Christ (RKD, Rīgas Kristus Draudze) was founded in Riga in 1995 and is part of the International Churches of Christ movement (ICOC). Our mission is to live by and pass on the Christianity described in the New Testament. It is a living, practical faith that transforms people, families, and society.</p>
                 </article>
 
                 <article class="about-card">
-                    <h3 class="card-title">Community</h3>
-                    <p>We are a Christian, Bible-based community where people of all ages, nationalities, and backgrounds gather to glorify God and practise His Word. Our desire is to help everyone know, trust, and follow Jesus in their daily lives.</p>
+                    <h3 class="card-title" data-i18n="about.community.title">Community</h3>
+                    <p data-i18n="about.community.body">We are a Christian, Bible-based community where people of all ages, nationalities, and backgrounds gather to glorify God and practise His Word. Our desire is to help everyone know, trust, and follow Jesus in their daily lives.</p>
                 </article>
 
                 <article class="about-card">
-                    <h3 class="card-title">Faith</h3>
-                    <p>We believe that Jesus Christ is the Son of God, who showed the world the true way of life, bore the sins of all on the cross, and rose again to be Lord over all creation. The church He builds is a family of people saved by grace. And we, as His church, strive to bring light and transformation to this world.</p>
+                    <h3 class="card-title" data-i18n="about.faith.title">Faith</h3>
+                    <p data-i18n="about.faith.body">We believe that Jesus Christ is the Son of God, who showed the world the true way of life, bore the sins of all on the cross, and rose again to be Lord over all creation. The church He builds is a family of people saved by grace. And we, as His church, strive to bring light and transformation to this world.</p>
                 </article>
 
                 <article class="about-card">
-                    <h3 class="card-title">Belonging</h3>
-                    <p>We love God, and we love people. There is a place for everyone in God's family, whether young or old, speaking Latvian, Russian, Ukrainian, or English — we are all united in His kingdom. We want to be a church where everyone feels accepted, encouraged, and strengthened.</p>
+                    <h3 class="card-title" data-i18n="about.belonging.title">Belonging</h3>
+                    <p data-i18n="about.belonging.body">We love God, and we love people. There is a place for everyone in God's family, whether young or old, speaking Latvian, Russian, Ukrainian, or English — we are all united in His kingdom. We want to be a church where everyone feels accepted, encouraged, and strengthened.</p>
                 </article>
             </div>
         </div>
@@ -66,7 +66,7 @@
     <!-- Services Section -->
     <section class="services" id="services">
         <div class="container">
-            <h2 class="section-title">Join Us</h2>
+            <h2 class="section-title" data-i18n="services.title">Join Us</h2>
             <div class="services-grid">
                 <div class="service-card service-main">
                     <div class="service-icon">
@@ -77,9 +77,9 @@
                             <circle cx="12" cy="3" r="1"></circle>
                         </svg>
                     </div>
-                    <h3 class="service-title">Sunday Service</h3>
+                    <h3 class="service-title" data-i18n="services.sunday.title">Sunday Service</h3>
                     <p class="service-time">11:00</p>
-                    <p class="service-desc">Whole church gathering every Sunday</p>
+                    <p class="service-desc" data-i18n="services.sunday.desc">Whole church gathering every Sunday</p>
                 </div>
                 <div class="service-card service-students">
                     <div class="service-icon">
@@ -88,16 +88,16 @@
                             <path d="M6 12v5c3 3 9 3 12 0v-5"></path>
                         </svg>
                     </div>
-                    <h3 class="service-title">Student Events</h3>
+                    <h3 class="service-title" data-i18n="services.students.title">Student Events</h3>
                     <a href="https://instagram.com/rkd_riga" target="_blank" rel="noopener noreferrer" class="service-link">
-                        Follow @rkd_riga
+                        <span data-i18n="services.students.link">Follow @rkd_riga</span>
                         <svg class="icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <rect x="2" y="2" width="20" height="20" rx="5" ry="5"></rect>
                             <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                             <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                         </svg>
                     </a>
-                    <p class="service-desc">Check Instagram for upcoming events</p>
+                    <p class="service-desc" data-i18n="services.students.desc">Check Instagram for upcoming events</p>
                 </div>
             </div>
         </div>
@@ -106,7 +106,7 @@
     <!-- Location Section -->
     <section class="location" id="location">
         <div class="container">
-            <h2 class="section-title">Location</h2>
+            <h2 class="section-title" data-i18n="location.title">Location</h2>
             <div class="location-content">
                 <div class="location-info">
                     <div class="address">
@@ -116,11 +116,11 @@
                         </svg>
                         <div>
                             <p class="address-text">Lienes iela 14A</p>
-                            <p class="address-city">Riga, Latvia</p>
+                            <p class="address-city" data-i18n="location.city">Riga, Latvia</p>
                         </div>
                     </div>
                     <a href="https://maps.google.com/?q=Lienes+iela+14A,+Riga,+Latvia" target="_blank" rel="noopener noreferrer" class="map-link">
-                        Open in Maps
+                        <span data-i18n="location.map">Open in Maps</span>
                         <svg class="icon-small" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                             <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
                             <polyline points="15 3 21 3 21 9"></polyline>
@@ -148,7 +148,7 @@
         <div class="container">
             <div class="donate-wrapper">
                 <button class="donate-toggle" id="donateToggle">
-                    <span class="donate-text">Support our ministry</span>
+                    <span class="donate-text" data-i18n="donate.button">Support our ministry</span>
                     <svg class="donate-chevron" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <polyline points="6 9 12 15 18 9"></polyline>
                     </svg>
@@ -156,19 +156,19 @@
                 <div class="donate-content" id="donateContent">
                     <div class="bank-details">
                         <div class="bank-row">
-                            <span class="bank-label">Recipient</span>
+                            <span class="bank-label" data-i18n="donate.label.recipient">Recipient</span>
                             <span class="bank-value">Riga Church of Christ</span>
                         </div>
                         <div class="bank-row">
-                            <span class="bank-label">IBAN</span>
+                            <span class="bank-label" data-i18n="donate.label.iban">IBAN</span>
                             <span class="bank-value">LV00XXXX0000000000000</span>
                         </div>
                         <div class="bank-row">
-                            <span class="bank-label">Bank</span>
+                            <span class="bank-label" data-i18n="donate.label.bank">Bank</span>
                             <span class="bank-value">Bank Name</span>
                         </div>
                         <div class="bank-row">
-                            <span class="bank-label">SWIFT/BIC</span>
+                            <span class="bank-label" data-i18n="donate.label.swift">SWIFT/BIC</span>
                             <span class="bank-value">XXXXLVXX</span>
                         </div>
                     </div>
@@ -180,13 +180,13 @@
     <!-- Contact Section -->
     <section class="contact" id="contact">
         <div class="container">
-            <h2 class="section-title">Contact Us</h2>
+            <h2 class="section-title" data-i18n="contact.title">Contact Us</h2>
             <div class="contact-grid">
                 <a href="tel:+37120000000" class="contact-item">
                     <svg class="contact-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
                         <path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path>
                     </svg>
-                    <span class="contact-label">Phone</span>
+                    <span class="contact-label" data-i18n="contact.label.phone">Phone</span>
                     <span class="contact-value">+371 20 000 000</span>
                 </a>
 
@@ -195,7 +195,7 @@
                         <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
                         <polyline points="22,6 12,13 2,6"></polyline>
                     </svg>
-                    <span class="contact-label">Email</span>
+                    <span class="contact-label" data-i18n="contact.label.email">Email</span>
                     <span class="contact-value">info@rkd.lv</span>
                 </a>
 
@@ -205,7 +205,7 @@
                         <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"></path>
                         <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"></line>
                     </svg>
-                    <span class="contact-label">Instagram</span>
+                    <span class="contact-label" data-i18n="contact.label.instagram">Instagram</span>
                     <span class="contact-value">@rkd_riga</span>
                 </a>
             </div>
@@ -219,9 +219,35 @@
         </svg>
     </button>
 
-    <!-- Scroll Animation Script -->
+    <script src="translations.js"></script>
     <script>
-        // Intersection Observer for entrance animations
+        // --- Language switcher ---
+        const LANG_STORAGE_KEY = 'rkd_lang';
+
+        function applyLanguage(lang) {
+            const dict = translations[lang];
+            if (!dict) return;
+
+            document.querySelectorAll('[data-i18n]').forEach(el => {
+                const key = el.dataset.i18n;
+                if (dict[key] !== undefined) el.textContent = dict[key];
+            });
+
+            document.documentElement.lang = lang;
+            localStorage.setItem(LANG_STORAGE_KEY, lang);
+
+            document.querySelectorAll('.lang-btn').forEach(btn => {
+                btn.classList.toggle('active', btn.dataset.lang === lang);
+            });
+        }
+
+        document.querySelectorAll('.lang-btn').forEach(btn => {
+            btn.addEventListener('click', () => applyLanguage(btn.dataset.lang));
+        });
+
+        applyLanguage(localStorage.getItem(LANG_STORAGE_KEY) || 'en');
+
+        // --- Scroll animations ---
         const animateObserver = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
@@ -234,12 +260,11 @@
             threshold: 0.1
         });
 
-        // Observe all animatable cards
         document.querySelectorAll('.about-card, .service-card').forEach(card => {
             animateObserver.observe(card);
         });
 
-        // Mobile focus observer (separate from entrance animations)
+        // Mobile focus observer
         const mobileObserverOptions = {
             root: null,
             rootMargin: '-20% 0px -20% 0px',
@@ -272,22 +297,18 @@
         initMobileObserver();
         window.addEventListener('resize', initMobileObserver);
 
-        // Back to top button
+        // --- Back to top ---
         const backToTop = document.getElementById('backToTop');
 
         window.addEventListener('scroll', () => {
-            if (window.scrollY > 400) {
-                backToTop.classList.add('visible');
-            } else {
-                backToTop.classList.remove('visible');
-            }
+            backToTop.classList.toggle('visible', window.scrollY > 400);
         });
 
         backToTop.addEventListener('click', () => {
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
-        // Donate toggle
+        // --- Donate toggle ---
         const donateToggle = document.getElementById('donateToggle');
         const donateContent = document.getElementById('donateContent');
 
