@@ -12,7 +12,7 @@ const translations = {
         'about.belonging.title': 'Belonging',
         'about.belonging.body': 'We love God, and we love people. There is a place for everyone in God\'s family, whether young or old, speaking Latvian, Russian, Ukrainian, or English — we are all united in His kingdom. We want to be a church where everyone feels accepted, encouraged, and strengthened.',
 
-        'services.title': 'Join Us',
+        'services.title': 'Join Us!',
         'services.sunday.title': 'Sunday Service',
         'services.sunday.desc': 'Whole church gathering every Sunday',
         'services.students.title': 'Student Events',
@@ -48,7 +48,7 @@ const translations = {
         'about.belonging.title': 'Piederība',
         'about.belonging.body': 'Mēs mīlam Dievu un mīlam cilvēkus. Neatkarīgi no tā, vai esi jaunietis vai sirmgalvis, vai runā latviski, krieviski, ukrainiski vai angliski — Dieva ģimenē ir vieta ikvienam. Mēs vēlamies būt draudze, kur ikviens tiek pieņemts, iedrošināts un stiprināts.',
 
-        'services.title': 'Pievienojies mums',
+        'services.title': 'Pievienojies mums!',
         'services.sunday.title': 'Svētdienas dievkalpojums',
         'services.sunday.desc': 'Visa draudze pulcējas katru svētdienu',
         'services.students.title': 'Studentu pasākumi',
@@ -84,7 +84,7 @@ const translations = {
         'about.belonging.title': 'Принадлежность',
         'about.belonging.body': 'Мы любим Бога и любим людей. Независимо от того, молод ты или стар, говоришь по-латышски, по-русски, по-украински или по-английски — в семье Бога есть место для каждого. Мы хотим быть церковью, где каждый чувствует себя принятым, ободрённым и укреплённым.',
 
-        'services.title': 'Присоединяйся',
+        'services.title': 'Присоединяйся!',
         'services.sunday.title': 'Воскресное служение',
         'services.sunday.desc': 'Собрание всей церкви каждое воскресенье',
         'services.students.title': 'Студенческие мероприятия',
