@@ -21,7 +21,7 @@ const translations = {
         'services.sunday.title': 'Sunday Service',
         'services.sunday.desc': 'Whole church gathering every Sunday',
         'services.students.title': 'Student Events',
-        'services.students.link': 'Follow @rkd_riga',
+        'services.students.link': 'Follow @rkd_students',
         'services.students.desc': 'Check Instagram for upcoming events',
 
         'location.title': 'Location',
@@ -62,7 +62,7 @@ const translations = {
         'services.sunday.title': 'Svētdienas dievkalpojums',
         'services.sunday.desc': 'Visa draudze pulcējas katru svētdienu',
         'services.students.title': 'Studentu pasākumi',
-        'services.students.link': 'Seko @rkd_riga',
+        'services.students.link': 'Seko @rkd_students',
         'services.students.desc': 'Skati Instagram jaunākos pasākumus',
 
         'location.title': 'Atrašanās vieta',
@@ -103,7 +103,7 @@ const translations = {
         'services.sunday.title': 'Воскресное служение',
         'services.sunday.desc': 'Собрание всей церкви каждое воскресенье',
         'services.students.title': 'Студенческие мероприятия',
-        'services.students.link': 'Подписывайся @rkd_riga',
+        'services.students.link': 'Подписывайся @rkd_students',
         'services.students.desc': 'Следи за событиями в Instagram',
 
         'location.title': 'Адрес',

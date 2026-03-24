@@ -751,6 +751,12 @@ body {
     color: var(--color-text);
 }
 
+.contact-name {
+    font-size: 0.8rem;
+    color: var(--color-text-light);
+    margin-top: 0.15rem;
+}
+
 
 /* Responsive Design */
 @media (max-width: 768px) {
