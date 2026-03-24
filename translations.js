@@ -2,6 +2,11 @@ const translations = {
     en: {
         'hero.name': 'Riga Church of Christ',
 
+        'nav.about': 'About',
+        'nav.events': 'Events',
+        'nav.location': 'Location',
+        'nav.contact': 'Contact',
+
         'about.title': 'Who Are We?',
         'about.mission.title': 'Mission',
         'about.mission.body': 'Riga Church of Christ (RKD, Rīgas Kristus Draudze) was founded in Riga in 1995 and is part of the International Churches of Christ movement (ICOC). Our mission is to live by and pass on the Christianity described in the New Testament. It is a living, practical faith that transforms people, families, and society.',
@@ -38,6 +43,11 @@ const translations = {
     lv: {
         'hero.name': 'Rīgas Kristus Draudze',
 
+        'nav.about': 'Par mums',
+        'nav.events': 'Pasākumi',
+        'nav.location': 'Atrašanās vieta',
+        'nav.contact': 'Kontakti',
+
         'about.title': 'Kas mēs esam?',
         'about.mission.title': 'Misija',
         'about.mission.body': 'Rīgas Kristus draudze ir dibināta Rīgā 1995. gadā un ir daļa no Starptautisko Kristus draudžu kustības (ICOC). Mūsu misija ir dzīvot un nodot tālāk Jaunajā Derībā aprakstīto kristietību — dzīvu, praktisku ticību, kas maina cilvēkus, ģimenes un sabiedrību.',
@@ -73,6 +83,11 @@ const translations = {
 
     ru: {
         'hero.name': 'Рижская Церковь Христа',
+
+        'nav.about': 'О нас',
+        'nav.events': 'Мероприятия',
+        'nav.location': 'Адрес',
+        'nav.contact': 'Контакты',
 
         'about.title': 'Кто мы?',
         'about.mission.title': 'Миссия',
