@@ -315,6 +315,51 @@
             window.scrollTo({ top: 0, behavior: 'smooth' });
         });
 
+        // --- Hero entrance animation ---
+        (function () {
+            const abbrEl = document.querySelector('.hero-abbr');
+            const sepEl  = document.querySelector('.hero-separator');
+            const nameEl = document.querySelector('.hero-name');
+            const titleEl = document.querySelector('.hero-title');
+
+            if (window.innerWidth <= 768) {
+                // Mobile: sequential fades, no slide
+                setTimeout(() => abbrEl.classList.add('reveal'), 100);
+                setTimeout(() => sepEl.classList.add('reveal'), 800);
+                setTimeout(() => nameEl.classList.add('reveal'), 1400);
+                return;
+            }
+
+            // Desktop: cinematic sequence
+            // Set initial offset instantly (no transition), then re-enable transitions
+            const offset = (titleEl.offsetWidth - abbrEl.offsetWidth) / 2;
+            abbrEl.style.transition = 'none';
+            abbrEl.style.transform = `translateX(${offset}px)`;
+
+            // Phase 1 (~0–1s): fade RKD in at center
+            requestAnimationFrame(() => {
+                requestAnimationFrame(() => {
+                    abbrEl.style.transition = ''; // restore CSS transitions
+                    abbrEl.classList.add('reveal');
+
+                    // Phase 2 (~1–1.8s): slide RKD left to its flex position
+                    setTimeout(() => {
+                        abbrEl.style.transform = 'translateX(0)';
+
+                        // Phase 3 (~1.8–2.2s): draw separator
+                        setTimeout(() => {
+                            sepEl.classList.add('reveal');
+
+                            // Phase 4 (~2.2–3.2s): reveal name left-to-right
+                            setTimeout(() => {
+                                nameEl.classList.add('reveal');
+                            }, 400);
+                        }, 800);
+                    }, 1000);
+                });
+            });
+        })();
+
         // --- Donate toggle ---
         const donateToggle = document.getElementById('donateToggle');
         const donateContent = document.getElementById('donateContent');
