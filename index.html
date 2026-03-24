@@ -15,7 +15,9 @@
     <header class="header">
         <div class="header-container">
             <div class="logo">
-                <img src="logo.svg" alt="RKD Logo" class="logo-svg">
+                <a href="#" class="logo-link" aria-label="Back to top">
+                    <img src="logo.svg" alt="RKD Logo" class="logo-svg">
+                </a>
             </div>
             <nav class="header-nav">
                 <a href="#about" class="nav-link">About</a>
@@ -85,6 +87,7 @@
                         </svg>
                     </div>
                     <h3 class="service-title" data-i18n="services.sunday.title">Sunday Service</h3>
+
                     <p class="service-time">11:00</p>
                     <p class="service-desc" data-i18n="services.sunday.desc">Whole church gathering every Sunday</p>
                 </div>
@@ -359,6 +362,12 @@
                 });
             });
         })();
+
+        // --- Logo scroll to top ---
+        document.querySelector('.logo-link').addEventListener('click', function(e) {
+            e.preventDefault();
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
 
         // --- Donate toggle ---
         const donateToggle = document.getElementById('donateToggle');
