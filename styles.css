@@ -608,7 +608,7 @@ body {
     overflow: hidden;
     transition: max-height 0.4s ease, border-width 0s 0.4s;
     background: var(--color-bg);
-    border: 0 solid var(--color-accent-warm);
+    border: 0 solid var(--color-accent-dark);
     border-top: none;
     border-radius: 0 0 var(--border-radius) var(--border-radius);
 }
