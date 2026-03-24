@@ -387,7 +387,7 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-accent-warm), var(--color-text-light));
+    background: linear-gradient(90deg, var(--color-accent-warm), rgba(139, 115, 85, 0.15));
     opacity: 0;
     transition: var(--transition);
 }
@@ -689,7 +689,7 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-accent-warm), var(--color-text-light));
+    background: linear-gradient(90deg, var(--color-accent-warm), rgba(139, 115, 85, 0.15));
     opacity: 0;
     transition: var(--transition);
 }
