@@ -13,6 +13,8 @@
     --color-text-light: #999999;
     --color-accent: #2c2c2c;
     --color-accent-warm: #8b7355;
+    --color-accent-warm-dim: rgba(139, 115, 85, 0.35);
+    --color-accent-warm-faint: rgba(139, 115, 85, 0.15);
     --color-accent-dark: #3D2B1F;
     --color-border: #e5e5e5;
     --color-white: #ffffff;
@@ -216,27 +218,16 @@ body {
     line-height: 1;
     text-shadow: 0 0 8px #fff, 0 0 8px #fff, 0 0 12px #fff;
     opacity: 0;
-    transition: opacity 0.8s ease-out, transform 0.8s ease-in-out;
-}
-
-.hero-abbr.reveal {
-    opacity: 1;
 }
 
 .hero-separator {
     width: 60px;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-accent-warm), rgba(139, 115, 85, 0.15));
+    background: linear-gradient(90deg, var(--color-accent-warm), var(--color-accent-warm-faint));
     border-radius: 2px;
     opacity: 0;
     transform: scaleX(0);
     transform-origin: left center;
-    transition: transform 0.4s ease-out, opacity 0.2s ease-out;
-}
-
-.hero-separator.reveal {
-    opacity: 1;
-    transform: scaleX(1);
 }
 
 .hero-name {
@@ -249,12 +240,41 @@ body {
     text-shadow: 0 0 8px #fff, 0 0 8px #fff, 0 0 12px #fff;
     opacity: 0;
     clip-path: inset(0 100% 0 0);
-    transition: clip-path 1s ease-out, opacity 0.1s ease-out;
 }
 
-.hero-name.reveal {
-    opacity: 1;
-    clip-path: inset(0 0% 0 0);
+/* Hero entrance animation keyframes */
+@keyframes heroFadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+@keyframes heroAbbrSlide {
+    from { transform: translateX(var(--hero-abbr-offset, 0)); }
+    to { transform: translateX(0); }
+}
+
+@keyframes heroSeparatorReveal {
+    from { opacity: 0; transform: scaleX(0); }
+    to { opacity: 1; transform: scaleX(1); }
+}
+
+@keyframes heroNameReveal {
+    from { opacity: 0; clip-path: inset(0 100% 0 0); }
+    to { opacity: 1; clip-path: inset(0 0% 0 0); }
+}
+
+/* Desktop: cinematic sequence triggered by .play on .hero-title */
+.hero-title.play .hero-abbr {
+    animation: heroFadeIn 0.8s ease-out 0.1s both,
+               heroAbbrSlide 0.8s ease-in-out 1.1s forwards;
+}
+
+.hero-title.play .hero-separator {
+    animation: heroSeparatorReveal 0.4s ease-out 1.9s both;
+}
+
+.hero-title.play .hero-name {
+    animation: heroNameReveal 1s ease-out 2.3s both;
 }
 
 /* Section Titles */
@@ -287,14 +307,14 @@ body {
     padding-left: calc(var(--spacing-lg) + 4px);
     background: var(--color-bg);
     border-radius: var(--border-radius);
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease, border-color 0.4s ease;
     border-left: 4px solid transparent;
     opacity: 0;
     transform: translateY(30px);
 }
 
 .about-card.animate-in {
-    opacity: 0.85;
+    opacity: 1;
     transform: translateY(0);
 }
 
@@ -337,8 +357,8 @@ body {
     left: 0;
     width: 40px;
     height: 2px;
-    background: rgba(139, 115, 85, 0.35);
-    transition: all 0.4s ease;
+    background: var(--color-accent-warm-dim);
+    transition: width 0.4s ease, background 0.4s ease;
 }
 
 .about-card p {
@@ -362,13 +382,6 @@ body {
     background: var(--color-accent-warm);
 }
 
-/* Section Divider */
-.section-divider {
-    height: 1px;
-    background: linear-gradient(90deg, transparent, var(--color-border), transparent);
-    margin: 0;
-}
-
 /* Services Section */
 .services {
     padding: var(--spacing-xl) 0;
@@ -388,7 +401,7 @@ body {
     border-radius: var(--border-radius);
     padding: var(--spacing-lg);
     text-align: center;
-    transition: all 0.4s ease;
+    transition: transform 0.4s ease, box-shadow 0.4s ease, opacity 0.4s ease, border-color 0.4s ease;
     position: relative;
     overflow: hidden;
     opacity: 0;
@@ -410,7 +423,7 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-accent-warm), rgba(139, 115, 85, 0.15));
+    background: linear-gradient(90deg, var(--color-accent-warm), var(--color-accent-warm-faint));
     opacity: 0;
     transition: var(--transition);
 }
@@ -712,7 +725,7 @@ body {
     left: 0;
     right: 0;
     height: 3px;
-    background: linear-gradient(90deg, var(--color-accent-warm), rgba(139, 115, 85, 0.15));
+    background: linear-gradient(90deg, var(--color-accent-warm), var(--color-accent-warm-faint));
     opacity: 0;
     transition: var(--transition);
 }
@@ -799,12 +812,25 @@ body {
         text-align: center;
     }
 
+    /* Mobile hero: simple sequential fades */
+    .hero-title.play .hero-abbr {
+        animation: heroFadeIn 0.6s ease-out 0.1s both;
+    }
+
+    .hero-title.play .hero-separator {
+        animation: heroSeparatorReveal 0.4s ease-out 0.8s both;
+    }
+
+    .hero-title.play .hero-name {
+        animation: heroNameReveal 0.6s ease-out 1.4s both;
+    }
+
     .about-card {
         padding: var(--spacing-md);
         padding-left: calc(var(--spacing-md) + 4px);
         opacity: 0.7;
         transform: translateX(-10px);
-        transition: all 0.5s ease;
+        transition: transform 0.5s ease, opacity 0.5s ease, border-color 0.5s ease;
     }
 
     .about-card.in-view {
@@ -826,10 +852,6 @@ body {
 
     .map-container {
         order: -1;
-    }
-
-    .bank-card {
-        padding: var(--spacing-md);
     }
 
     .bank-row {
@@ -936,8 +958,4 @@ body {
 /* Smooth scrolling offset for fixed header */
 section[id] {
     scroll-margin-top: 100px;
-}
-
-html {
-    scroll-behavior: smooth;
 }

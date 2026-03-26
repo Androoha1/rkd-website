@@ -140,7 +140,7 @@
                 </div>
                 <div class="map-container">
                     <iframe
-                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2175.8!2d24.1!3d56.95!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2sLienes%20iela%2014A%2C%20R%C4%ABga!5e0!3m2!1sen!2slv!4v1234567890"
+                        src="https://maps.google.com/maps?q=Lienes+iela+14A,+Riga,+Latvia&output=embed"
                         width="100%"
                         height="300"
                         style="border:0;"
@@ -322,45 +322,21 @@
         // --- Hero entrance animation ---
         (function () {
             const abbrEl = document.querySelector('.hero-abbr');
-            const sepEl  = document.querySelector('.hero-separator');
-            const nameEl = document.querySelector('.hero-name');
             const titleEl = document.querySelector('.hero-title');
 
             if (window.innerWidth <= 768) {
-                // Mobile: sequential fades, no slide
-                setTimeout(() => abbrEl.classList.add('reveal'), 100);
-                setTimeout(() => sepEl.classList.add('reveal'), 800);
-                setTimeout(() => nameEl.classList.add('reveal'), 1400);
+                // Mobile: CSS handles sequential fades via animation-delay
+                titleEl.classList.add('play');
                 return;
             }
 
-            // Desktop: cinematic sequence
-            // Set initial offset instantly (no transition), then re-enable transitions
+            // Desktop: set initial offset so RKD starts centered, then trigger CSS sequence
             const offset = (titleEl.offsetWidth - abbrEl.offsetWidth) / 2;
-            abbrEl.style.transition = 'none';
+            abbrEl.style.setProperty('--hero-abbr-offset', `${offset}px`);
             abbrEl.style.transform = `translateX(${offset}px)`;
 
-            // Phase 1 (~0–1s): fade RKD in at center
             requestAnimationFrame(() => {
-                requestAnimationFrame(() => {
-                    abbrEl.style.transition = ''; // restore CSS transitions
-                    abbrEl.classList.add('reveal');
-
-                    // Phase 2 (~1–1.8s): slide RKD left to its flex position
-                    setTimeout(() => {
-                        abbrEl.style.transform = 'translateX(0)';
-
-                        // Phase 3 (~1.8–2.2s): draw separator
-                        setTimeout(() => {
-                            sepEl.classList.add('reveal');
-
-                            // Phase 4 (~2.2–3.2s): reveal name left-to-right
-                            setTimeout(() => {
-                                nameEl.classList.add('reveal');
-                            }, 400);
-                        }, 800);
-                    }, 1000);
-                });
+                titleEl.classList.add('play');
             });
         })();
 
