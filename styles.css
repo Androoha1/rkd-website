@@ -686,7 +686,10 @@ body {
     color: var(--color-text);
     font-family: var(--font-body);
     text-align: right;
-    word-break: break-all;
+}
+
+.bank-value--iban {
+    font-size: 0.75rem;
 }
 
 /* Contact Section */
@@ -912,6 +915,10 @@ body {
 
     .bank-value {
         font-size: 0.9rem;
+    }
+
+    .bank-value--iban {
+        font-size: 0.82rem;
     }
 }
 
