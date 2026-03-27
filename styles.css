@@ -656,7 +656,7 @@ body {
 }
 
 .bank-details {
-    padding: var(--spacing-md) var(--spacing-lg);
+    padding: var(--spacing-md) clamp(1rem, 8%, var(--spacing-lg));
 }
 
 .bank-row {
@@ -689,7 +689,7 @@ body {
 }
 
 .bank-value--iban {
-    font-size: 0.75rem;
+    overflow-wrap: anywhere;
 }
 
 /* Contact Section */
@@ -917,9 +917,6 @@ body {
         font-size: 0.9rem;
     }
 
-    .bank-value--iban {
-        font-size: 0.82rem;
-    }
 }
 
 /* Back to Top Button */
